@@ -1,0 +1,22 @@
+<html lang="pt-br">
+  <body background="background.jpg" style="height: 100vh;">
+    <div id="app-root">
+      <div class="search-container">
+        <h1>Buscar Personagem de One Piece</h1>
+        <div class="form-container">
+          <input #nameInput type="text" placeholder="Digite o nome do personagem">
+          <button (click)="searchCharacter(nameInput.value)">Buscar</button>
+        </div>
+        <div *ngIf="characterInfo.length">
+          <h2>{{ characterInfo[0].name }}</h2>
+          <p>Idade: {{ characterInfo[0].age }}</p>
+          <p>Tamanho: {{ characterInfo[0].size }}</p>
+          <p>Recompensa: {{ characterInfo[0].bounty }}</p>
+        </div>
+        <div *ngIf="!characterInfo.length">
+          <p>Nenhum personagem encontrado.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
