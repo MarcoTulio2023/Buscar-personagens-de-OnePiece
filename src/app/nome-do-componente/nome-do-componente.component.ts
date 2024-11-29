@@ -13,5 +13,5 @@ export class NomeDoComponenteComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  searchCharacter(name: string): void { this.service.searchCharacter(name).subscribe( data => { this.characterInfo = data; console.log(data); // Inspecione os dados retornados
+  searchCharacter(name: string): void { this.service.searchCharacter(name).subscribe( data => { this.characterInfo = data; console.log(data);
      }, error => { console.error('Erro ao buscar personagem:', error); } ); }}
